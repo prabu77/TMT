@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+        https://cordova.apache.org/docs/en/latest/
+    Some notes:
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <!--        <meta name="format-detection" content="telephone=no">-->
+    <!--        <meta name="msapplication-tap-highlight" content="no">-->
+    <!--        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">-->
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Hello World</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/model/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="css/model/bootstrap.min.js" type="text/javascript"></script>
+    <script src="css/model/jquery.min.js" type="text/javascript"></script>
+
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert2/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert2/sweetalert2.min.js"></script>
+    <link href="js/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+            var FILE_PATH = "https://thiranmigutiruppur.com/iccc_app/";
+            function exitAppPopup()
+            {
+                navigator.notification.confirm(
+                    'Do you want to exit now?'
+                    , function(button) {
+                        if (button == 2) {
+                            navigator.app.exitApp();
+                        }
+                    }
+                    , 'TMT'
+                    , 'No,Yes'
+                );
+                return false;
+            }
+
+            function onLoad()
+            {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
+            function onDeviceReady()
+            {
+                window.localStorage.setItem("imei_number", device.uuid);
+                checkConnection();
+                document.addEventListener("backbutton", function(e)
+                {
+                    var previous_id = $("#previous_id").val();
+                    var exp_val = previous_id.split("?");
+                    if(previous_id =='index.php')
+                    {
+                       exitAppPopup();
+                    }
+                    else if(previous_id == "dashboard.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('index_two.php');
+                       $('.replace_div').load(FILE_PATH+'index_two.php'+'?'+exp_val[1]);
+
+                    }
+                    else if(previous_id == "index_two.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('otp.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'otp.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "dashboard.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('index_two.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'index_two.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "online_service.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "download_form.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('online_service.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'online_service.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "online_tendering.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "media_corner.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "press_release_new.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('media_corner.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'media_corner.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "photo_gallery.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('media_corner.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'media_corner.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "video_gallery.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('media_corner.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'media_corner.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "contact.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "profileedit.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                      else if(previous_id == "government_official.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('administrative_information.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'administrative_information.php'+'?'+exp_val[1]);
+                    }
+                     else if(previous_id == "city_infromation.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                     else if(previous_id == "about_us.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('city_infromation.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'city_infromation.php'+'?'+exp_val[1]);
+                    }
+                     else if(previous_id == "tourist_location.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('city_infromation.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'city_infromation.php'+'?'+exp_val[1]);
+                    }
+                     else if(previous_id == "administrative_information.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('city_infromation.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'city_infromation.php'+'?'+exp_val[1]);
+                    }
+                      else if(previous_id == "public_representative.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('administrative_information.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'administrative_information.php'+'?'+exp_val[1]);
+                    }
+                      else if(previous_id == "government-official.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('administrative_information.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'administrative_information.php'+'?'+exp_val[1]);
+                    }
+                      else if(previous_id == "projects.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                     else if(previous_id == "profile_public.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "profileedit.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "publicgravience_login.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('profile_public.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'profile_public.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "stage1_update.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('zone_details.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'zone_details.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "zone_details.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('profile_nodalofficer.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'profile_nodalofficer.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "profile_nodalofficer.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('dashboard.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'dashboard.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "public_details.php"+"?"+exp_val[1])
+                    {
+                       $("#previous_id").val('profile_public.php'+'?'+exp_val[1]);
+                       $('.replace_div').load(FILE_PATH+'profile_public.php'+'?'+exp_val[1]);
+                    }
+                    else if(previous_id == "register.php")
+                    {
+                       $("#previous_id").val('index.php');
+                       $('.replace_div').load(FILE_PATH+'index.php');
+                    }
+                    else if(previous_id == "otp.php")
+                    {
+                       $("#previous_id").val('index.php');
+                       $('.replace_div').load(FILE_PATH+'index.php');
+                    }
+                },false);
+                initialpageload();
+
+            }
+            function checkConnection()
+            {
+               var networkState = navigator.connection.type;
+               if (networkState == 'none')
+               {
+                    alert("Please check your internet connection and try again");
+                    navigator.app.exitApp();
+               }
+            }
+            function initialpageload()
+            {
+                //userlogin_getLocation();
+                if(window.localStorage.getItem("password1") == 'password')
+                {
+                    $("#previous_id").val('password.html');
+                    $('.replace_div').load(FILE_PATH+'password.php');
+                }
+                else if(window.localStorage.getItem("loggedIn") == 1)
+                {
+                    $("#previous_id").val('dashboard.html');
+                    $('.replace_div').load(FILE_PATH+'dashboard.php');
+                }
+                else
+                {
+                    $('.replace_div').load(FILE_PATH+'index.php');
+                }
+            }
+
+            function pagereplace(filename)
+            {
+
+                   if(filename == 'logout.php')
+                   {
+                        $('.replace_div').load(FILE_PATH+"index.php");
+                   }else{
+                   //alert(filename);
+                        var exp_val = filename.split("?");
+                        $("#previous_id").val(filename);
+
+                        $('.replace_div').load(FILE_PATH+filename);
+                   }
+            }
+
+            function userlogin_getLocation()
+            {
+                var options = {
+                  enableHighAccuracy: true,
+                  timeout: 3600,
+                  maximumAge: 0
+                };
+                function onSuccess(position)
+                {
+                    $('#login_att_lati').val(position.coords.latitude);
+                    $('#login_att_long').val(position.coords.longitude);
+                };
+                function onError(error)
+                {
+                    //alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
+                }
+                navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+            }
+            function usergetLocation()
+            {
+                var login_att_lati = $('#login_att_lati').val();
+                var login_att_long = $('#login_att_long').val();
+
+                if(login_att_lati=='' && login_att_long=='')
+                {
+                    alert('Please Exit the App and Enable the GPS Location..!');
+                    navigator.app.exitApp();
+                }
+            }
+        </script>
+</head>
+<body onload="onLoad()">
+<input type="hidden" name="previous_id" id="previous_id" value='index.php'>
+<input type="hidden" name="login_att_lati" id="login_att_lati" class="forme">
+<input type="hidden" name="login_att_long" id="login_att_long" class="forme">
+<div class="replace_div"></div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.TMT_v1.app"
+4    android:hardwareAccelerated="true"
+5    android:versionCode="10050"
+6    android:versionName="1.0.1" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="24"
+9-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml
+11
+12    <supports-screens
+12-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
+13        android:anyDensity="true"
+13-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
+14        android:largeScreens="true"
+14-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
+15        android:normalScreens="true"
+15-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
+16        android:resizeable="true"
+16-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
+17        android:smallScreens="true"
+17-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
+18        android:xlargeScreens="true" />
+18-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
+19
+20    <uses-permission android:name="android.permission.INTERNET" />
+20-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:4:5-67
+20-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
+21    <uses-permission
+21-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:16:5-108
+22        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+22-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:16:49-105
+23        android:maxSdkVersion="32" />
+23-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:16:22-48
+24    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+24-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:17:5-76
+24-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:17:22-73
+25    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+25-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:18:5-75
+25-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:18:22-72
+26
+27    <queries>
+27-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:19:5-33:15
+28        <intent>
+28-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:20:9-22:18
+29            <action android:name="android.media.action.IMAGE_CAPTURE" />
+29-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:21:13-73
+29-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:21:21-70
+30        </intent>
+31        <intent>
+31-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:23:9-25:18
+32            <action android:name="android.intent.action.GET_CONTENT" />
+32-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:24:13-72
+32-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:24:21-69
+33        </intent>
+34        <intent>
+34-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:26:9-28:18
+35            <action android:name="android.intent.action.PICK" />
+35-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:27:13-65
+35-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:27:21-62
+36        </intent>
+37        <intent>
+37-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:29:9-32:18
+38            <action android:name="com.android.camera.action.CROP" />
+38-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:30:13-69
+38-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:30:21-66
+39
+40            <data
+40-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:31:13-73
+41                android:mimeType="image/*"
+41-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:31:19-45
+42                android:scheme="content" />
+42-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:31:46-70
+43        </intent>
+44    </queries>
+45
+46    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+46-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:34:5-81
+46-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:34:22-78
+47    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+47-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:35:5-79
+47-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:35:22-76
+48
+49    <uses-feature
+49-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:36:5-90
+50        android:name="android.hardware.location.gps"
+50-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:36:19-63
+51        android:required="true" />
+51-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:36:64-87
+52
+53    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+53-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:37:5-75
+53-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:37:22-72
+54    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+54-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:38:5-79
+54-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:38:22-76
+55
+56    <permission
+56-->[androidx.core:core:1.9.0] C:\Users\AED\.gradle\caches\transforms-3\540e0c7ae841ce860063cd4e6f7ae1f5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+57        android:name="com.TMT_v1.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+57-->[androidx.core:core:1.9.0] C:\Users\AED\.gradle\caches\transforms-3\540e0c7ae841ce860063cd4e6f7ae1f5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+58        android:protectionLevel="signature" />
+58-->[androidx.core:core:1.9.0] C:\Users\AED\.gradle\caches\transforms-3\540e0c7ae841ce860063cd4e6f7ae1f5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+59
+60    <uses-permission android:name="com.TMT_v1.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+60-->[androidx.core:core:1.9.0] C:\Users\AED\.gradle\caches\transforms-3\540e0c7ae841ce860063cd4e6f7ae1f5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+60-->[androidx.core:core:1.9.0] C:\Users\AED\.gradle\caches\transforms-3\540e0c7ae841ce860063cd4e6f7ae1f5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+61
+62    <application
+62-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:5:5-15:19
+63        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+63-->[androidx.core:core:1.9.0] C:\Users\AED\.gradle\caches\transforms-3\540e0c7ae841ce860063cd4e6f7ae1f5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+64        android:extractNativeLibs="false"
+65        android:hardwareAccelerated="true"
+65-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:5:18-52
+66        android:icon="@mipmap/ic_launcher"
+66-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:5:53-87
+67        android:label="@string/app_name"
+67-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:5:88-120
+68        android:supportsRtl="true" >
+68-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:5:121-147
+69        <activity
+69-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
+70            android:name="com.TMT_v1.app.MainActivity"
+70-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:229-256
+71            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+71-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:19-135
+72            android:exported="true"
+72-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:136-159
+73            android:label="@string/activity_name"
+73-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:160-197
+74            android:launchMode="singleTop"
+74-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:198-228
+75            android:theme="@style/Theme.App.SplashScreen"
+75-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:257-302
+76            android:windowSoftInputMode="adjustResize" >
+76-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:6:303-345
+77            <intent-filter android:label="@string/launcher_name" >
+77-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
+77-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
+78                <action android:name="android.intent.action.MAIN" />
+78-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:8:17-69
+78-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:8:25-66
+79
+80                <category android:name="android.intent.category.LAUNCHER" />
+80-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
+80-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
+81            </intent-filter>
+82        </activity>
+83
+84        <provider
+85            android:name="org.apache.cordova.camera.FileProvider"
+85-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:12:149-202
+86            android:authorities="com.TMT_v1.app.cordova.plugin.camera.provider"
+86-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:12:19-88
+87            android:exported="false"
+87-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:12:89-113
+88            android:grantUriPermissions="true" >
+88-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:12:114-148
+89            <meta-data
+89-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:13:13-123
+90                android:name="android.support.FILE_PROVIDER_PATHS"
+90-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:13:24-74
+91                android:resource="@xml/camera_provider_paths" />
+91-->D:\AndroidApps\TMT_v1\platforms\android\app\src\main\AndroidManifest.xml:13:75-120
+92        </provider>
+93        <provider
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+94            android:name="androidx.startup.InitializationProvider"
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+95            android:authorities="com.TMT_v1.app.androidx-startup"
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+96            android:exported="false" >
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+97            <meta-data
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+98                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+99                android:value="androidx.startup" />
+99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AED\.gradle\caches\transforms-3\2d68370dc7f3c2d94a649a2db3230588\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+100            <meta-data
+100-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AED\.gradle\caches\transforms-3\0d3e757404207615a628c09fa8278421\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+101                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+101-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AED\.gradle\caches\transforms-3\0d3e757404207615a628c09fa8278421\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+102                android:value="androidx.startup" />
+102-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AED\.gradle\caches\transforms-3\0d3e757404207615a628c09fa8278421\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+103        </provider>
+104    </application>
+105
+106</manifest>

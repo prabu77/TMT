@@ -1,0 +1,4 @@
+#Tue Apr 09 18:30:23 IST 2024
+base.0=D\:\\AndroidApps\\TMT_v1\\platforms\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

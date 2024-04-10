@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="D:\AndroidApps\TMT_v1\platforms\android\app"
+    name=":app"
+    type="APP"
+    maven="TMT_v1:app:"
+    gradle="7.4.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\AED\AppData\Local\Android\Sdk\platforms\android-33\android.jar;C:\Users\AED\AppData\Local\Android\Sdk\build-tools\33.0.2\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33"
+    neverShrinking="true">
+  <lintOptions
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
